@@ -1,0 +1,52 @@
+.jumbotron {
+    position: relative;
+    z-index: -2;
+    width: 100%;
+    height: 100vh;
+    background-color: $color-primary-0;
+
+    .tagline {
+        font-family: teko;
+        font-size: 3vw;
+        font-weight: 300;
+        width: 85vw;
+        margin: 0 auto;
+        padding-top: 35vh;
+        text-align: center;
+        letter-spacing: .5vw;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .scroll-button-wrapper {
+        position: absolute;
+        bottom: 5vh;
+        width: 100%;
+
+        .scroll-button {
+            font-family: dosis;
+            font-size: 2vw;
+            width: 20vw;
+            margin: 0 auto;
+            transition: color .3s ease-in-out, transform .5s ease-in-out;
+            text-align: center;
+            letter-spacing: .1vw;
+            text-transform: capitalize;
+            color: white;
+
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-15%);
+                animation: font-bounce 1s infinite .5s;
+                color: $color-complement-2;
+            }
+        }
+
+        //END SCROLL-BUTTON
+   
+    }
+
+    //END SCROLL-BUTTON-WRAPPER
+}
+
+//END JUMBOTRON

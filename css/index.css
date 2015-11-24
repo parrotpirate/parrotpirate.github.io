@@ -1,3 +1,25 @@
+@-webkit-keyframes font-bounce {
+  0%, 100% {
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+  }
+  50% {
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
+  }
+}
+
+@keyframes font-bounce {
+  0%, 100% {
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+  }
+  50% {
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
+  }
+}
+
 header {
   position: absolute;
   top: 5vh;
@@ -121,16 +143,6 @@ header .indicator .nav-item:last-child:after {
   background-color: #EA5100;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
 .jumbotron {
   position: relative;
   z-index: -2;
@@ -141,13 +153,59 @@ body {
 
 .jumbotron .tagline {
   font-family: teko;
+  font-size: 3vw;
   font-weight: 300;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: .5vw;
   width: 85vw;
   margin: 0 auto;
   padding-top: 35vh;
   text-align: center;
-  font-size: 3vw;
+  letter-spacing: .5vw;
+  text-transform: uppercase;
+  color: white;
+}
+
+.jumbotron .scroll-button-wrapper {
+  position: absolute;
+  bottom: 5vh;
+  width: 100%;
+}
+
+.jumbotron .scroll-button-wrapper .scroll-button {
+  font-family: dosis;
+  font-size: 2vw;
+  width: 20vw;
+  margin: 0 auto;
+  -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.5s ease-in-out;
+          transition: color 0.3s ease-in-out, transform 0.5s ease-in-out;
+  text-align: center;
+  letter-spacing: .1vw;
+  text-transform: capitalize;
+  color: white;
+}
+
+.jumbotron .scroll-button-wrapper .scroll-button:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-15%);
+      -ms-transform: translateY(-15%);
+          transform: translateY(-15%);
+  -webkit-animation: font-bounce 1s infinite 0.5s;
+          animation: font-bounce 1s infinite 0.5s;
+  color: #FF6E20;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio {
+  width: 100%;
+  height: 100vh;
 }
