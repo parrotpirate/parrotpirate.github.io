@@ -1,0 +1,126 @@
+header {
+    position: absolute;
+    top: 5vh;
+    width: 100%;
+    height: 10vh;
+    background-color: $color-secondary-1-3;
+    box-shadow: 0 5px 10px black;
+
+    .navbar {
+        position: absolute;
+        right: 5vw;
+        display: inline-block;
+        width: 100%;
+        max-width: 32vw;
+        height: 100%;
+        padding: 0;
+
+        .nav-item {
+            display: block;
+            float: left;
+            width: $width;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            transition: .3s ease-in-out;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+
+            &:last-child {
+                &:hover,
+                &.active {
+                    &:before {
+                        left: (100% - $width + 15%) !important;
+                    }
+
+                    &:after {
+                        left: (100% - $width) !important;
+                    }
+                }
+            }
+
+            &.active {
+                //*Nav item selection coloring*
+                color: $color-complement-0;
+            }
+
+            &:hover {
+                //Nav item selection coloring
+                color: $color-complement-0;
+            }
+
+            li {
+                //*Nav-item font styling*
+                font-family: teko;
+                font-size: 1.5vw;
+                font-weight: 300;
+                letter-spacing: .5vw;
+                text-transform: uppercase;
+
+                @include verticalCenter;
+            }
+        }
+
+        //END NAV-ITEM
+   
+    }
+
+    //END NAVBAR
+    .indicator {
+        //*Sliding indicator animation*
+        @for $i from 1 through $nav-items-loop-offset {
+            .nav-item:nth-child(#{$i}).active ~ .nav-item:last-child:after {
+                left: $width * $i - $width;
+            }
+
+            .nav-item:nth-child(#{$i}).active ~ .nav-item:last-child:before {
+                left: $width * $i + 15% - $width;
+            }
+
+            .nav-item:nth-child(#{$i}):hover ~ .nav-item:last-child:after {
+                left: ($width * $i - $width) !important;
+            }
+
+            .nav-item:nth-child(#{$i}):hover ~ .nav-item:last-child:before {
+                left: ($width * $i + 15% - $width) !important;
+            }
+        }
+
+        .nav-item:last-child {
+            //*Sliding indicator styling*
+            &:before,
+            &:after {
+                position: absolute;
+                display: block;
+                content: '';
+                transition: .3s all ease-in-out;
+            }
+
+            &:before {
+                top: 0;
+                left: 15%;
+                width: 0;
+                height: 0;
+                border: .5vw solid transparent;
+                border-top-color: $color-complement-0;
+            }
+
+            &:after {
+                z-index: -1;
+                top: -.7vh;
+                bottom: -1.4vh;
+                left: 0;
+                width: $width;
+                background-color: $color-complement-0;
+            }
+        }
+
+        //END INDICATOR STYLING
+   
+    }
+
+    //END INDICATOR
+}
+
+//END HEADER

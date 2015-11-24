@@ -1,0 +1,153 @@
+header {
+  position: absolute;
+  top: 5vh;
+  width: 100%;
+  height: 10vh;
+  background-color: #083E7B;
+  box-shadow: 0 5px 10px black;
+}
+
+header .navbar {
+  position: absolute;
+  right: 5vw;
+  display: inline-block;
+  width: 100%;
+  max-width: 32vw;
+  height: 100%;
+  padding: 0;
+}
+
+header .navbar .nav-item {
+  display: block;
+  float: left;
+  width: 33.33333%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: .3s ease-in-out;
+          transition: .3s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+header .navbar .nav-item:last-child:hover:before,
+header .navbar .nav-item:last-child.active:before {
+  left: 81.66667% !important;
+}
+
+header .navbar .nav-item:last-child:hover:after,
+header .navbar .nav-item:last-child.active:after {
+  left: 66.66667% !important;
+}
+
+header .navbar .nav-item.active {
+  color: #EA5100;
+}
+
+header .navbar .nav-item:hover {
+  color: #EA5100;
+}
+
+header .navbar .nav-item li {
+  font-family: teko;
+  font-size: 1.5vw;
+  font-weight: 300;
+  letter-spacing: .5vw;
+  text-transform: uppercase;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header .indicator .nav-item:nth-child(1).active ~ .nav-item:last-child:after {
+  left: 0%;
+}
+
+header .indicator .nav-item:nth-child(1).active ~ .nav-item:last-child:before {
+  left: 15%;
+}
+
+header .indicator .nav-item:nth-child(1):hover ~ .nav-item:last-child:after {
+  left: 0% !important;
+}
+
+header .indicator .nav-item:nth-child(1):hover ~ .nav-item:last-child:before {
+  left: 15% !important;
+}
+
+header .indicator .nav-item:nth-child(2).active ~ .nav-item:last-child:after {
+  left: 33.33333%;
+}
+
+header .indicator .nav-item:nth-child(2).active ~ .nav-item:last-child:before {
+  left: 48.33333%;
+}
+
+header .indicator .nav-item:nth-child(2):hover ~ .nav-item:last-child:after {
+  left: 33.33333% !important;
+}
+
+header .indicator .nav-item:nth-child(2):hover ~ .nav-item:last-child:before {
+  left: 48.33333% !important;
+}
+
+header .indicator .nav-item:last-child:before,
+header .indicator .nav-item:last-child:after {
+  position: absolute;
+  display: block;
+  content: '';
+  -webkit-transition: .3s all ease-in-out;
+          transition: .3s all ease-in-out;
+}
+
+header .indicator .nav-item:last-child:before {
+  top: 0;
+  left: 15%;
+  width: 0;
+  height: 0;
+  border: .5vw solid transparent;
+  border-top-color: #EA5100;
+}
+
+header .indicator .nav-item:last-child:after {
+  z-index: -1;
+  top: -.7vh;
+  bottom: -1.4vh;
+  left: 0;
+  width: 33.33333%;
+  background-color: #EA5100;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.jumbotron {
+  position: relative;
+  z-index: -2;
+  width: 100%;
+  height: 100vh;
+  background-color: #009A6C;
+}
+
+.jumbotron .tagline {
+  font-family: teko;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .5vw;
+  width: 85vw;
+  margin: 0 auto;
+  padding-top: 35vh;
+  text-align: center;
+  font-size: 3vw;
+}
