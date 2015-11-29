@@ -16,56 +16,56 @@ body {
     height: 100%;
 }
 
-.portfolio{
-    width: 100%;
-    height: 100vh;
+.project {
+    position: relative;
+    height: 300px;
+    padding: 0;
+    text-align: center;
+    background-image: url(../resources/460x300.jpg);
+    background-position: center;
+    background-size: cover;
 
-    .project{
-        outline: 1px solid black;
-        height: $portfolioHeight;
-        width: $portfolioWidth;
-        float: left;
-        position: relative;
+    @media #{$mobile} {
+        height: 175px;
+    }
 
-        &:after{
-            content: 'Some text here';
-            font-family: dosis;
-            font-size: 1.5vw;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 0;
-            background-color: black;
-            opacity: 1;
-            color: white;
-            transition: all 0.3s ease-in-out;
-        }
+    // border: 1px solid white;
+    &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: auto;
+        padding: 5px;
+        content: '';
+        transition: all .3s ease-in-out;
+        text-align: left;
+        opacity: 0;
+        background-color: white;
+    }
 
-        &:hover:after{
-            height: 15%;
-        }
+    &:hover > .icon {
+        transform: scale(0);
+    }
 
-        .projectImage{
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            transition: all 0.3s ease-in-out;
+    &:hover:after {
+        width: 100%;
+        content: 'Placeholder text here.';
+        opacity: 1;
+    }
 
-            &.bottom{
-                opacity: 0;
-            }
-        }
+    .icon {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all .3s ease-in-out;
+        text-align: center;
+        background-color: black;
 
-        &:hover > .projectImage.top{
-            opacity: 0;
-            transform: scale(0);
-        }
-
-        &:hover > .projectImage.bottom{
-            opacity: 1;
+        img {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
 }

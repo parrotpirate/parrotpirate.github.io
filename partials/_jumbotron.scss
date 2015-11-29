@@ -4,10 +4,11 @@
     width: 100%;
     height: 100vh;
     background-color: $color-primary-0;
+    margin-bottom: 0;
 
     .tagline {
         font-family: teko;
-        font-size: 3vw;
+        font-size: 3vw !important;
         font-weight: 300;
         width: 85vw;
         margin: 0 auto;
@@ -16,6 +17,18 @@
         letter-spacing: .5vw;
         text-transform: uppercase;
         color: white;
+
+        h1{
+            font-size: 3vw;
+
+            @media (max-width: 800px) {
+                font-size: 4vw;
+            }
+
+            @media (max-width: 500px) {
+                font-size: 7vw;
+            }
+        }
     }
 
     .scroll-button-wrapper {
@@ -25,7 +38,7 @@
 
         .scroll-button {
             font-family: dosis;
-            font-size: 2vw;
+            font-size: 2vw; 
             width: 20vw;
             margin: 0 auto;
             transition: color .3s ease-in-out, transform .5s ease-in-out;
@@ -39,6 +52,18 @@
                 transform: translateY(-15%);
                 animation: font-bounce 1s infinite .5s;
                 color: $color-complement-2;
+            }
+
+            p{
+                font-size: 2vw;
+
+                @media #{$tablet} {
+                    font-size: 24px;
+                }
+
+                @media #{$mobile} {
+                    font-size: 18px;
+                }
             }
         }
 
