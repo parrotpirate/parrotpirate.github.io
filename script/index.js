@@ -11,20 +11,20 @@ jQuery(document).ready(function($) {
 	$('.nav-display-button button').click(function(e) {
 		/* Act on the event */
 		e.preventDefault();
-		$('.navbar').slideToggle('fast');
+		$('.nav-wrapper').slideToggle('fast');
 	});
 
 	$(window).resize(function(event) {
 		/* Act on the event */
 		if ($(window).width() > 800) {
-			$('.navbar').css('display', 'inline-block');
+			$('.nav-wrapper').css('display', 'inline-block');
 		}
 	});
 
 	$(window).resize(function(event) {
 		/* Act on the event */
 		if ($(window).width() <= 800) {
-			$('.navbar').css('display', 'none');
+			$('.nav-wrapper').css('display', 'none');
 		}
 	});
 	

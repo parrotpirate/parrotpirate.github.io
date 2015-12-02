@@ -86,18 +86,16 @@ header .nav-display-button button {
           transform: translateY(-50%);
 }
 
-header .navbar {
+header .nav-wrapper {
   position: absolute;
   right: 60px;
-  display: inline-block;
   width: 30%;
   min-width: 498px;
   height: 100%;
-  padding: 0;
 }
 
 @media (max-width: 800px) {
-  header .navbar {
+  header .nav-wrapper {
     top: 50px;
     right: 0;
     width: 100%;
@@ -107,12 +105,17 @@ header .navbar {
 }
 
 @media (max-width: 500px) {
-  header .navbar {
+  header .nav-wrapper {
     top: 40px;
   }
 }
 
-header .navbar .nav-item {
+header .nav-wrapper .navbar {
+  height: 100%;
+  width: 100%;
+}
+
+header .nav-wrapper .navbar .nav-item {
   display: block;
   float: left;
   width: 33.33333%;
@@ -127,7 +130,7 @@ header .navbar .nav-item {
 }
 
 @media (max-width: 800px) {
-  header .navbar .nav-item {
+  header .nav-wrapper .navbar .nav-item {
     float: none;
     width: 100%;
     border-top: 1px solid #009A6C;
@@ -137,30 +140,30 @@ header .navbar .nav-item {
 }
 
 @media (max-width: 500px) {
-  header .navbar .nav-item {
+  header .nav-wrapper .navbar .nav-item {
     height: 40px;
   }
 }
 
-header .navbar .nav-item:last-child:hover:before,
-header .navbar .nav-item:last-child.active:before {
+header .nav-wrapper .navbar .nav-item:last-child:hover:before,
+header .nav-wrapper .navbar .nav-item:last-child.active:before {
   left: 81.66667% !important;
 }
 
-header .navbar .nav-item:last-child:hover:after,
-header .navbar .nav-item:last-child.active:after {
+header .nav-wrapper .navbar .nav-item:last-child:hover:after,
+header .nav-wrapper .navbar .nav-item:last-child.active:after {
   left: 66.66667% !important;
 }
 
-header .navbar .nav-item.active {
+header .nav-wrapper .navbar .nav-item.active {
   color: #EA5100;
 }
 
-header .navbar .nav-item:hover {
+header .nav-wrapper .navbar .nav-item:hover {
   color: #EA5100;
 }
 
-header .navbar .nav-item li {
+header .nav-wrapper .navbar .nav-item li {
   font-family: teko;
   font-size: 25px;
   font-weight: 300;
@@ -174,7 +177,7 @@ header .navbar .nav-item li {
 }
 
 @media (max-width: 500px) {
-  header .navbar .nav-item li {
+  header .nav-wrapper .navbar .nav-item li {
     font-size: 18px;
   }
 }

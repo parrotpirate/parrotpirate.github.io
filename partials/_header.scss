@@ -19,6 +19,7 @@ header {
 
 
     .nav-display-button {
+        // *Nav toggle button for mobile formats*
         position: absolute;
         right: 5%;
         color: white;
@@ -52,14 +53,12 @@ header {
         }
     }
 
-    .navbar {
+    .nav-wrapper {
         position: absolute;
         right: 60px;
-        display: inline-block;
         width: 30%;
         min-width: 498px;
         height: 100%;
-        padding: 0;
 
         @include tablet {
             top: 50px;
@@ -75,76 +74,91 @@ header {
         }
 
 
-        .nav-item {
-            display: block;
-            float: left;
-            width: $width;
+        .navbar {
+            // position: absolute;
+            // right: 60px;
+            // display: inline-block;
+            // width: 30%;
+            // min-width: 498px;
             height: 100%;
-            margin: 0;
-            padding: 0;
-            transition: .3s ease-in-out;
-            text-align: center;
-            text-decoration: none;
-            color: white;
+            width: 100%;
 
-            @include tablet {
-                float: none;
-                width: 100%;
-                border-top: 1px solid $color-primary-0;
-                border-bottom: 1px solid $color-primary-0;
-                background-color: $color-secondary-1-3;
-            }
+            // padding: 0;
 
+            .nav-item {
+                display: block;
+                float: left;
+                width: $width;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                transition: .3s ease-in-out;
+                text-align: center;
+                text-decoration: none;
+                color: white;
 
-            @include mobile {
-                height: 40px;
-            }
-
-
-            &:last-child {
-                &:hover,
-                &.active {
-                    &:before {
-                        left: (100% - $width + 15%) !important;
-                    }
-
-                    &:after {
-                        left: (100% - $width) !important;
-                    }
+                @include tablet {
+                    float: none;
+                    width: 100%;
+                    border-top: 1px solid $color-primary-0;
+                    border-bottom: 1px solid $color-primary-0;
+                    background-color: $color-secondary-1-3;
                 }
-            }
 
-            &.active {
-                //*Nav item selection coloring*
-                color: $color-complement-0;
-            }
-
-            &:hover {
-                //Nav item selection coloring
-                color: $color-complement-0;
-            }
-
-            li {
-                //*Nav-item font styling*
-                font-family: teko;
-                font-size: 25px;
-                font-weight: 300;
-                letter-spacing: 7px;
-                text-transform: uppercase;
-
-                @include verticalCenter;
 
                 @include mobile {
-                    font-size: 18px;
+                    height: 40px;
+                }
+
+
+                &:last-child {
+                    &:hover,
+                    &.active {
+                        &:before {
+                            left: (100% - $width + 15%) !important;
+                        }
+
+                        &:after {
+                            left: (100% - $width) !important;
+                        }
+                    }
+                }
+
+                &.active {
+                    //*Nav item selection coloring*
+                    color: $color-complement-0;
+                }
+
+                &:hover {
+                    //Nav item selection coloring
+                    color: $color-complement-0;
+                }
+
+                li {
+                    //*Nav-item font styling*
+                    font-family: teko;
+                    font-size: 25px;
+                    font-weight: 300;
+                    letter-spacing: 7px;
+                    text-transform: uppercase;
+
+                    @include verticalCenter;
+
+                    @include mobile {
+                        font-size: 18px;
+                    }
                 }
             }
+
+            // *END NAV-ITEM*
+       
         }
 
-        // *END NAV-ITEM*
+        // *END NAVBAR*
    
     }
 
-    // *END NAVBAR*
+    // *END NAV-WRAPPER*
     .indicator {
         //*Sliding indicator animation*
         @for $i from 1 through $nav-items-loop-offset {
