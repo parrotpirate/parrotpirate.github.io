@@ -20,12 +20,12 @@ header {
 
     .nav-display-button {
         // *Nav toggle button for mobile formats*
+        font-family: teko;
         position: absolute;
         right: 5%;
-        color: white;
-        font-family: teko;
-        height: 100%;
         display: none;
+        height: 100%;
+        color: white;
 
         @include tablet {
             display: block;
@@ -33,27 +33,28 @@ header {
 
 
         p {
-            display: inline-block;
-            font-weight: 300;
-            text-transform: uppercase;
             font-size: 21px;
+            font-weight: 300;
+            display: inline-block;
             margin-right: 10px;
+            text-transform: uppercase;
 
             @include verticalCenter;
         }
 
         button {
-            background-color: $color-primary-0;
-            border: none;
-            height: 25px;
             width: 30px;
+            height: 25px;
+            border: none;
             border-radius: 5px;
+            background-color: $color-primary-0;
 
             @include verticalCenter;
         }
     }
 
     .nav-wrapper {
+        // *Target for "slideToggle"*
         position: absolute;
         right: 60px;
         width: 30%;
@@ -63,9 +64,9 @@ header {
         @include tablet {
             top: 50px;
             right: 0;
+            display: none;
             width: 100%;
             min-width: 0;
-            display: none;
         }
 
 
@@ -75,15 +76,8 @@ header {
 
 
         .navbar {
-            // position: absolute;
-            // right: 60px;
-            // display: inline-block;
-            // width: 30%;
-            // min-width: 498px;
-            height: 100%;
             width: 100%;
-
-            // padding: 0;
+            height: 100%;
 
             .nav-item {
                 display: block;

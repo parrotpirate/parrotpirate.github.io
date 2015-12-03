@@ -16,6 +16,7 @@ body {
     height: 100%;
 }
 
+// *Project screenshot view*
 .project {
     position: relative;
     height: 300px;
@@ -25,10 +26,12 @@ body {
     background-position: center;
     background-size: cover;
 
-    @media #{$mobile} {
+    @include mobile {
         height: 175px;
     }
 
+
+    // *Project keyword description*
     &:after {
         position: absolute;
         bottom: 0;
@@ -43,16 +46,19 @@ body {
         background-color: white;
     }
 
+    // *Shrink icon on hover*
     &:hover > .icon {
         transform: scale(0);
     }
 
+    // *Display keyword description on hover*
     &:hover:after {
         width: 100%;
         content: 'Placeholder text here.';
         opacity: 1;
     }
 
+    // *Project icons*
     .icon {
         position: absolute;
         width: 100%;
@@ -67,4 +73,8 @@ body {
             transform: translateY(-50%);
         }
     }
+
+    // *END ICON*
 }
+
+// *END PROJECT*

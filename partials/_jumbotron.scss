@@ -7,6 +7,7 @@
     margin-bottom: 0;
     background-color: $color-primary-0;
 
+    // *Heading wrapper*
     .tagline {
         font-family: teko;
         font-size: 3vw !important;
@@ -19,32 +20,38 @@
         text-transform: uppercase;
         color: white;
 
-        @media #{$tablet} {
+        @include tablet {
             padding-top: 30vh;
         }
 
-        @media #{$mobile} {
+
+        @include mobile {
             padding-top: 20vh;
         }
 
+
+        // *Tagline*
         h1 {
             font-size: 3vw;
 
-            @media (max-width: 800px) {
+            @include tablet {
                 font-size: 4vw;
             }
 
-            @media (max-width: 500px) {
+
+            @include mobile {
                 font-size: 6vw;
             }
         }
     }
 
+    // *Scroll button*
     .scroll-button-wrapper {
         position: absolute;
         bottom: 5vh;
         width: 100%;
 
+        // *Scroll button styling*
         .scroll-button {
             font-family: dosis;
             font-size: 2vw;

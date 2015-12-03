@@ -1,31 +1,34 @@
 jQuery(document).ready(function($) {
-	
-	// *Scroll to portfolio section when button is clicked*
-	$('.scroll-button').click(function(e) {
-		e.preventDefault();
-		$('html, body').animate({
-			scrollTop: $('.portfolio').offset().top}, '0.3s');
-	});
 
-	// *Menu display toggle for mobile format*
-	$('.nav-display-button button').click(function(e) {
-		/* Act on the event */
-		e.preventDefault();
-		$('.nav-wrapper').slideToggle('fast');
-	});
+    // *Scroll to portfolio section when button is clicked*
+    $('.scroll-button').click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('.portfolio').offset().top
+        }, '0.3s');
+    });
 
-	$(window).resize(function(event) {
-		/* Act on the event */
-		if ($(window).width() > 800) {
-			$('.nav-wrapper').css('display', 'inline-block');
-		}
-	});
+    // *Menu display toggle for mobile format*
+    $('.nav-display-button button').click(function(e) {
+        /* Act on the event */
+        e.preventDefault();
+        $('.nav-wrapper').slideToggle('fast');
+    });
 
-	$(window).resize(function(event) {
-		/* Act on the event */
-		if ($(window).width() <= 800) {
-			$('.nav-wrapper').css('display', 'none');
-		}
-	});
-	
+    // *Fix for menu toggle state when window is resized to desktop.*
+    $(window).resize(function(event) {
+        /* Act on the event */
+        if ($(window).width() > 800) {
+            $('.nav-wrapper').css('display', 'inline-block');
+        }
+    });
+
+    // *Fix for menu toggle state when window is resized to mobile.*
+    $(window).resize(function(event) {
+        /* Act on the event */
+        if ($(window).width() <= 800) {
+            $('.nav-wrapper').css('display', 'none');
+        }
+    });
+
 });
