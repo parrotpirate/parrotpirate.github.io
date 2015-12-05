@@ -3,6 +3,7 @@
 @import "../partials/animations";
 @import "../partials/header";
 @import "../partials/jumbotron";
+@import "../partials/portfolio";
 
 * {
     box-sizing: border-box;
@@ -16,65 +17,36 @@ body {
     height: 100%;
 }
 
-// *Project screenshot view*
-.project {
-    position: relative;
-    height: 300px;
-    padding: 0;
-    text-align: center;
-    background-image: url(../resources/460x300.jpg);
-    background-position: center;
-    background-size: cover;
-
-    @include mobile {
-        height: 175px;
-    }
-
-
-    // *Project keyword description*
-    &:after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: auto;
-        padding: 5px;
-        content: '';
-        transition: all .3s ease-in-out;
-        text-align: left;
-        opacity: 0;
-        background-color: white;
-    }
-
-    // *Shrink icon on hover*
-    &:hover > .icon {
-        transform: scale(0);
-    }
-
-    // *Display keyword description on hover*
-    &:hover:after {
-        width: 100%;
-        content: 'Placeholder text here.';
-        opacity: 1;
-    }
-
-    // *Project icons*
-    .icon {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transition: all .3s ease-in-out;
-        text-align: center;
-        background-color: black;
-
-        img {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-
-    // *END ICON*
+.clearfloat {
+    clear: both;
 }
 
-// *END PROJECT*
+.divider {
+    width: 100%;
+    height: 50px;
+    background-color: $color-primary-0;
+}
+
+footer {
+    padding: 20px 10px 0 10px;
+    background-color: $color-secondary-1-3;
+    color: white;
+
+    & > div {
+        width: 100 / 3 * 1%;
+    }
+
+    .about {
+        padding: 0 10px;
+
+        img {
+            float: left;
+            display: inline-block;
+        }
+
+        p {
+            float: left;
+            display: inline-block;
+        }
+    }
+}
