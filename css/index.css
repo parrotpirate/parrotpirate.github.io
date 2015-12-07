@@ -31,7 +31,7 @@ header {
   box-shadow: 0 5px 10px black;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   header {
     height: 50px;
     box-shadow: none;
@@ -54,7 +54,7 @@ header .nav-display-button {
   color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   header .nav-display-button {
     display: block;
   }
@@ -94,7 +94,7 @@ header .nav-wrapper {
   height: 100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   header .nav-wrapper {
     top: 50px;
     right: 0;
@@ -129,7 +129,7 @@ header .nav-wrapper .navbar .nav-item {
   color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   header .nav-wrapper .navbar .nav-item {
     float: none;
     width: 100%;
@@ -223,7 +223,7 @@ header .indicator .nav-item:last-child:after {
           transition: .3s all ease-in-out;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   header .indicator .nav-item:last-child:before,
   header .indicator .nav-item:last-child:after {
     display: none;
@@ -279,7 +279,7 @@ header .indicator .nav-item:last-child:after {
   color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .jumbotron .tagline {
     padding-top: 30vh;
   }
@@ -295,7 +295,7 @@ header .indicator .nav-item:last-child:after {
   font-size: 3vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .jumbotron .tagline h1 {
     font-size: 4vw;
   }
@@ -340,7 +340,7 @@ header .indicator .nav-item:last-child:after {
   font-size: 2vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .jumbotron .scroll-button-wrapper .scroll-button p {
     font-size: 24px;
   }
@@ -377,10 +377,10 @@ header .indicator .nav-item:last-child:after {
   left: 0;
   width: 0;
   height: auto;
-  padding: 5px;
+  padding: 5px 0 5px 15px;
   content: '';
-  -webkit-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
   text-align: left;
   opacity: 0;
   background-color: rgba(255, 255, 255, 0.8);
@@ -471,6 +471,200 @@ header .indicator .nav-item:last-child:after {
           transform: translateY(-50%);
 }
 
+.project.incomplete:hover > .icon, .project.incomplete-alt:hover > .icon {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.project.incomplete:hover:after, .project.incomplete-alt:hover:after {
+  opacity: 0;
+}
+
+.project.incomplete .icon, .project.incomplete-alt .icon {
+  background-color: lightgray;
+}
+
+.project.incomplete .icon img, .project.incomplete-alt .icon img {
+  height: 75%;
+  width: 75%;
+}
+
+.project.incomplete-alt .icon {
+  background-color: #447BB8;
+}
+
+.divider {
+  width: 100%;
+  height: 75px;
+  background-color: #009A6C;
+}
+
+footer {
+  font-family: dosis, sans-serif;
+  padding: 75px 0 50px;
+  color: white;
+  background-color: #083E7B;
+}
+
+footer .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 950px) {
+  footer .container {
+    width: 100%;
+  }
+}
+
+footer .container .about,
+footer .container .links,
+footer .container .bottom-nav {
+  float: left;
+  width: 33.33333%;
+  padding: 0 30px;
+}
+
+@media (max-width: 950px) {
+  footer .container .about,
+  footer .container .links {
+    width: 50%;
+  }
+  footer .container .bottom-nav {
+    width: 100%;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  footer .container .about,
+  footer .container .links,
+  footer .container .bottom-nav {
+    width: 100%;
+  }
+  footer .container .links,
+  footer .container .bottom-nav {
+    padding-top: 30px;
+  }
+}
+
+footer .about img {
+  float: left;
+  width: 89.5px;
+  height: 109.5px;
+  margin: 5px 10px 0 0;
+}
+
+footer .about p {
+  line-height: 21px;
+}
+
+footer .links {
+  line-height: 21px;
+  text-align: center;
+}
+
+footer .links .wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+  footer .links .wrapper {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+footer .links .wrapper a {
+  -webkit-transition: .3s ease-in-out;
+          transition: .3s ease-in-out;
+  color: white;
+}
+
+footer .links .wrapper a:hover {
+  color: #FF6E20;
+}
+
+footer .links .wrapper a i {
+  font-size: 32px;
+  margin-right: 10px;
+  -webkit-transition: .3s ease-in-out;
+          transition: .3s ease-in-out;
+  vertical-align: top;
+}
+
+footer .links .wrapper p {
+  font-size: 18px;
+  display: inline-block;
+  width: 65%;
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+  footer .links .wrapper p {
+    display: none;
+  }
+}
+
+footer .links .wrapper p a {
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: #47CB00;
+}
+
+footer .links .wrapper p a:hover {
+  color: #FF6E20;
+}
+
+@media (max-width: 950px) {
+  footer .bottom-nav {
+    text-align: center;
+  }
+}
+
+footer .bottom-nav a {
+  font-family: teko, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  position: relative;
+  -webkit-transition: .2s ease-in-out;
+          transition: .2s ease-in-out;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #47CB00;
+}
+
+@media (max-width: 950px) {
+  footer .bottom-nav a {
+    display: inline-block;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  footer .bottom-nav a {
+    font-size: 18px;
+  }
+}
+
+footer .bottom-nav a:hover {
+  color: #FF6E20;
+}
+
+footer .bottom-nav p {
+  margin: 5px 0 10px;
+}
+
+@media (max-width: 950px) {
+  footer .bottom-nav p {
+    display: none;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -483,36 +677,6 @@ body {
   height: 100%;
 }
 
-.clearfloat {
+.clearfix {
   clear: both;
-}
-
-.divider {
-  width: 100%;
-  height: 50px;
-  background-color: #009A6C;
-}
-
-footer {
-  padding: 20px 10px 0 10px;
-  background-color: #083E7B;
-  color: white;
-}
-
-footer > div {
-  width: 33.33333%;
-}
-
-footer .about {
-  padding: 0 10px;
-}
-
-footer .about img {
-  float: left;
-  display: inline-block;
-}
-
-footer .about p {
-  float: left;
-  display: inline-block;
 }

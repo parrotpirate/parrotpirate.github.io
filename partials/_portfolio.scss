@@ -23,9 +23,9 @@
         left: 0;
         width: 0;
         height: auto;
-        padding: 5px;
+        padding: 5px 0 5px 15px;
         content: '';
-        transition: all .3s ease-in-out;
+        transition: all .5s ease-in-out;
         text-align: left;
         opacity: 0;
         background-color: rgba(255, 255, 255, 0.8);
@@ -59,6 +59,7 @@
     }
 
     // *END ICON*
+
     // *Individual project cell stylings*
     &.sage {
         background-image: url(../resources/projects/sage-screenshot.png);
@@ -116,6 +117,33 @@
     }
 
     // *END TO DO LIST*
+}
+
+.project.incomplete {
+    &:hover > .icon {
+        transform: none;
+    }
+
+    &:hover:after {
+        opacity: 0;
+    }
+
+    .icon {
+        background-color: lightgray;
+
+        img {
+            height: 75%;
+            width: 75%;
+        }
+    }
+}
+
+.project.incomplete-alt {
+    @extend .project.incomplete;
+
+    .icon {
+        background-color: $color-secondary-1-1;
+    }
 }
 
 // *END PROJECT*
