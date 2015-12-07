@@ -303,7 +303,7 @@ header .indicator .nav-item:last-child:after {
 
 @media (max-width: 500px) {
   .jumbotron .tagline h1 {
-    font-size: 6vw;
+    font-size: 8vw;
   }
 }
 
@@ -348,7 +348,13 @@ header .indicator .nav-item:last-child:after {
 
 @media (max-width: 500px) {
   .jumbotron .scroll-button-wrapper .scroll-button p {
-    font-size: 18px;
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 500px) {
+  .jumbotron .scroll-button-wrapper .scroll-button .fa {
+    font-size: 21px;
   }
 }
 
