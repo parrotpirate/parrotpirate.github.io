@@ -32,7 +32,7 @@
 		<div class="nav-wrapper">
 			<ul class="navbar indicator">
 				<a href="index.html" class="nav-item"><li>portfolio</li></a>
-				<a href="#" class="nav-item"><li>about</li></a>
+				<a href="about.html" class="nav-item"><li>about</li></a>
 				<a href="contact.html" class="nav-item active"><li>contact</li></a>
 			</ul>
 		</div>
@@ -43,38 +43,42 @@
 	<div class="main">
 		<!-- Color box around form -->
 		<div class="frame">
-			<!-- Contact form -->
-			<form action="http://formspree.io/parker.stephend@gmail.com" method="POST">
+			<!-- Form wrapper -->
+			<div class="wrapper form">
+				<!-- Contact form -->
+				<form action="http://formspree.io/parker.stephend@gmail.com" method="POST">
 
-				<h3 id="form-title">Contact Stephen</h3>
-				<input type="hidden" name="_subject" value="Portfolio contact submission">
+					<h3 id="form-title">Contact Stephen</h3>
+					<input type="hidden" name="_subject" value="Portfolio contact submission">
 
-				<!-- Column Wrapper -->
-				<div class="wrapper name">
-					<label for="name" id="name-label">Name:</label>
-					<input type="text" name="name" id="name" placeholder="e.g. Doug Rattmann" size="25" required>
-					<label for="phone-number" id="phone-number-label">Phone Number:</label>
-					<input type="text" name ="phone-number" id="phone-number" placeholder="e.g. 777-777-7777" size="25">
-				</div>
-				<!-- *END COLUMN WARAPPER* -->
+					<!-- Column Wrapper -->
+					<div class="wrapper name">
+						<label for="name" id="name-label">Name:</label>
+						<input type="text" name="name" id="name" placeholder="e.g. Doug Rattmann" size="25" required>
+						<label for="phone-number" id="phone-number-label">Phone Number:</label>
+						<input type="text" name ="phone-number" id="phone-number" placeholder="e.g. 777-777-7777" size="25">
+					</div>
+					<!-- *END COLUMN WARAPPER* -->
 
-				<!-- Column Wrapper -->
-				<div class="wrapper email">
-					<label for="email" id="email-label">Email:</label>
-					<input type="email" name="_replyto" id="email" placeholder="e.g. doug.rattmann@gmail.com" size="25" required>
-					<label for="company" id="company-label">Company:</label>
-					<input type="text" name="company" id="company" placeholder="e.g. Aperture Science" size="25">
-				</div>
-				<!-- *END COLUMN WARAPPER* -->
+					<!-- Column Wrapper -->
+					<div class="wrapper email">
+						<label for="email" id="email-label">Email:</label>
+						<input type="email" name="_replyto" id="email" placeholder="e.g. doug.rattmann@gmail.com" size="25" required>
+						<label for="company" id="company-label">Company:</label>
+						<input type="text" name="company" id="company" placeholder="e.g. Aperture Science" size="25">
+					</div>
+					<!-- *END COLUMN WARAPPER* -->
 
-				<div class="clearfix"></div>
-				<label for="message" id="message-label">Message:</label>
-				<textarea name="message" id="message" placeholder="Your message here" rows="15" cols="59"></textarea>
-				<input type="submit" id="send-button" value="Send">
-				<input type="text" name="_gotcha" style="display:none">
+					<div class="clearfix"></div>
+					<label for="message" id="message-label">Message:</label>
+					<textarea name="message" id="message" placeholder="Your message here" rows="15" cols="59"></textarea>
+					<input type="submit" id="send-button" value="Send">
+					<input type="text" name="_gotcha" style="display:none">
 
-			</form>
-			<!-- *END CONTACT FORM* -->
+				</form>
+				<!-- *END CONTACT FORM* -->
+			</div>
+			<!-- *END FORM WRAPPER -->
 
 		</div>
 		<!-- *END FRAME* -->
@@ -111,7 +115,7 @@
 			<div class="bottom-nav">
 				<a href="index.html">Portfolio</a>
 				<p>View Stephen's front-end development work</p>
-				<a href="">About</a>
+				<a href="about.html">About</a>
 				<p>Learn more about Stephen's skills and background</p>
 				<a href="contact.html">Contact</a>
 				<p>Get in touch with Stephen</p>
