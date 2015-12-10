@@ -402,17 +402,17 @@ header .indicator .nav-item:last-child:after {
 }
 
 .portfolio {
-  box-shadow: 3px 7px 15px black;
   position: relative;
+  box-shadow: 3px 7px 15px black;
 }
 
 .portfolio:after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 0;
+  content: '';
   box-shadow: 3px 7px 15px black;
 }
 
@@ -535,6 +535,23 @@ header .indicator .nav-item:last-child:after {
           transform: translateY(-50%);
 }
 
+.portfolio .project.codecamp {
+  background-image: url(/resources/projects/web-102-screenshot.png);
+}
+
+.portfolio .project.codecamp:after {
+  content: 'CSS';
+}
+
+.portfolio .project.codecamp .icon {
+  background-color: #274d8a;
+}
+
+.portfolio .project.codecamp .icon img {
+  width: 175px;
+  height: 175px;
+}
+
 .portfolio .project.incomplete:hover > .icon, .portfolio .project.incomplete-alt:hover > .icon {
   -webkit-transform: none;
       -ms-transform: none;
@@ -550,8 +567,8 @@ header .indicator .nav-item:last-child:after {
 }
 
 .portfolio .project.incomplete .icon img, .portfolio .project.incomplete-alt .icon img {
-  height: 75%;
   width: 75%;
+  height: 75%;
 }
 
 .portfolio .project.incomplete-alt .icon {

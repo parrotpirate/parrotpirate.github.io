@@ -1,14 +1,14 @@
 .portfolio {
-    box-shadow: 3px 7px 15px black;
     position: relative;
+    box-shadow: 3px 7px 15px black;
 
     &:after {
-        content: '';
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 0;
+        content: '';
         box-shadow: 3px 7px 15px black;
     }
 
@@ -73,7 +73,6 @@
         }
 
         // *END ICON*
-
         // *Individual project cell stylings*
         &.sage {
             background-image: url(../resources/projects/sage-screenshot.png);
@@ -134,6 +133,25 @@
    
     }
 
+    .project.codecamp {
+        background-image: url(/resources/projects/web-102-screenshot.png);
+
+        &:after {
+            content: 'CSS';
+        }
+
+        .icon {
+            background-color: #274d8a;
+
+            img {
+                width: 175px;
+                height: 175px;
+            }
+        }
+    }
+
+    // *END CODECAMP*
+    
     .project.incomplete {
         &:hover > .icon {
             transform: none;
@@ -147,8 +165,8 @@
             background-color: lightgray;
 
             img {
-                height: 75%;
                 width: 75%;
+                height: 75%;
             }
         }
     }
