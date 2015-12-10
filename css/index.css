@@ -552,14 +552,31 @@ header .indicator .nav-item:last-child:after {
   height: 175px;
 }
 
+.portfolio .project.real-estate {
+  background-image: url(/resources/projects/real-estate-screenshot.png);
+}
+
+.portfolio .project.real-estate:after {
+  content: "SCSS";
+}
+
+.portfolio .project.real-estate .icon {
+  background-color: #FEE600;
+}
+
+.portfolio .project.real-estate .icon img {
+  width: 225px;
+  height: 175px;
+}
+
 .portfolio .project.incomplete:hover > .icon, .portfolio .project.incomplete-alt:hover > .icon {
   -webkit-transform: none;
       -ms-transform: none;
           transform: none;
 }
 
-.portfolio .project.incomplete:hover:after, .portfolio .project.incomplete-alt:hover:after {
-  opacity: 0;
+.portfolio .project.incomplete:after, .portfolio .project.incomplete-alt:after {
+  display: none;
 }
 
 .portfolio .project.incomplete .icon, .portfolio .project.incomplete-alt .icon {
@@ -567,8 +584,8 @@ header .indicator .nav-item:last-child:after {
 }
 
 .portfolio .project.incomplete .icon img, .portfolio .project.incomplete-alt .icon img {
-  width: 75%;
-  height: 75%;
+  width: 175px;
+  height: 175px;
 }
 
 .portfolio .project.incomplete-alt .icon {

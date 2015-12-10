@@ -151,22 +151,41 @@
     }
 
     // *END CODECAMP*
-    
+
+    .project.real-estate {
+        background-image: url(/resources/projects/real-estate-screenshot.png);
+
+        &:after {
+            content: "SCSS";
+        }
+
+        .icon {
+            background-color: #FEE600;
+
+            img {
+                width: 225px;
+                height: 175px;
+            }
+        }
+    }
+
+    // *END REAL ESTATE*
+
     .project.incomplete {
         &:hover > .icon {
             transform: none;
         }
 
-        &:hover:after {
-            opacity: 0;
+        &:after {
+            display: none;
         }
 
         .icon {
             background-color: lightgray;
 
             img {
-                width: 75%;
-                height: 75%;
+                width: 175px;
+                height: 175px;
             }
         }
     }
