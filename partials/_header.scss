@@ -18,6 +18,44 @@ header {
     }
 
 
+    .header-title {
+        display: inline-block;
+        position: absolute;
+        color: $color-complement-0;
+        font-family: teko, sans-serif;
+        text-transform: uppercase;
+        font-size: 38px;
+        letter-spacing: 3px;
+        margin-left: 10%;
+        margin-top: 28px;
+
+        @include tablet {
+            font-size: 32px;
+            margin-top: 12px;
+        }
+
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .header-title-mobile {
+        display: none;
+
+        @include mobile {
+            position: absolute;
+            display: inline-block;
+            color: $color-complement-0;
+            font-family: teko, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 32px;
+            margin-top: 5px;
+            margin-left: 10%;
+        }
+    }
+
     .nav-display-button {
         // *Nav toggle button for mobile formats*
         font-family: teko;
