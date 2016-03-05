@@ -404,6 +404,7 @@ header .indicator .nav-item:last-child:after {
 .portfolio {
   position: relative;
   box-shadow: 3px 7px 15px black;
+  /* END MOLINO */
 }
 
 .portfolio:after {
@@ -480,7 +481,7 @@ header .indicator .nav-item:last-child:after {
 }
 
 .portfolio .project.sage {
-  background-image: url(../resources/projects/sage-screenshot.png);
+  background-image: url("../resources/projects/sage-screenshot.png");
 }
 
 .portfolio .project.sage:after {
@@ -567,6 +568,30 @@ header .indicator .nav-item:last-child:after {
 .portfolio .project.real-estate .icon img {
   width: 225px;
   height: 175px;
+}
+
+.portfolio .project.molino {
+  background-image: url(/resources/projects/molino.png);
+}
+
+.portfolio .project.molino:after {
+  content: "SCSS, jQuery";
+}
+
+.portfolio .project.molino .icon {
+  background-color: #CD6804;
+}
+
+.portfolio .project.molino .icon p {
+  color: #FFDA6B;
+  font-size: 5em;
+  font-family: montez, serif;
+  text-shadow: 1px 0 1px black, 0 1px 1px black, -1px 0 1px black, 0 -1px 1px black;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .portfolio .project.incomplete:hover > .icon, .portfolio .project.incomplete-alt:hover > .icon {
