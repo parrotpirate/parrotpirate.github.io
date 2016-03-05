@@ -75,7 +75,7 @@
         // *END ICON*
         // *Individual project cell stylings*
         &.sage {
-            background-image: url(../resources/projects/sage-screenshot.png);
+            background-image: url("../resources/projects/sage-screenshot.png");
 
             &:after {
                 content: 'SCSS, jQuery';
@@ -170,6 +170,14 @@
     }
 
     // *END REAL ESTATE*
+
+    .project.molino {
+        background-image: url(/resources/projects/Molino.png);
+
+        &:after {
+            content: "SCSS, jQuery";
+        }
+    }
 
     .project.incomplete {
         &:hover > .icon {
